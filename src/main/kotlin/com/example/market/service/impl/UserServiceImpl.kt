@@ -1,10 +1,11 @@
-package com.example.market.service
+package com.example.market.service.impl
 
 import com.example.market.dto.UserDto
 import com.example.market.entity.Role
 import com.example.market.entity.User
 import com.example.market.repository.RoleRepository
 import com.example.market.repository.UserRepository
+import com.example.market.service.UserService
 import org.springframework.stereotype.Service
 import java.util.*
 
