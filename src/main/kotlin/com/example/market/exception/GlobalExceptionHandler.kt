@@ -14,6 +14,6 @@ class GlobalExceptionHandler {
     @ExceptionHandler(EntityNotFoundException::class)
     fun handleEntityNotFoundException(exception: EntityNotFoundException): EntityNotFoundExceptionResponseDto {
         return EntityNotFoundExceptionResponseDto(message = exception.message
-                ?: "Not Found", status = HttpStatus.NOT_FOUND)
+                ?: "Not Found", status = HttpStatus.NOT_FOUND, code = HttpStatus.NOT_FOUND.value())
     }
 }
