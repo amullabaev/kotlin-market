@@ -3,6 +3,7 @@ package com.example.market.controller
 import com.example.market.dto.UserDto
 import com.example.market.entity.User
 import com.example.market.service.UserService
+import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import java.util.*
 
@@ -20,7 +21,8 @@ class UserController(private val userService: UserService) {
         return userService.findById(id)
     }
 
-    @PostMapping("/create")
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     fun create(@RequestBody userDto: UserDto): User {
         return userService.create(userDto)
     }

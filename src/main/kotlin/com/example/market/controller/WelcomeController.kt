@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping
 @Controller
 class WelcomeController(private val properties: CustomProperties) {
 
-    @GetMapping("/")
+    @GetMapping
     fun index(model: Model): String {
         model.addAttribute("firstName", properties.firstName)
         model.addAttribute("lastName", properties.lastName)
